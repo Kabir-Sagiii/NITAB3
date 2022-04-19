@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <h2>Product Details</h2>
+      <dl>
+        <dt>Product Name</dt>
+        <dd>{{ productDetails.pname }}</dd>
+        <dt>Product Price</dt>
+        <dd>{{ productDetails.price }}</dd>
+        <dt>Product Qantity</dt>
+        <dd>{{ productDetails.qty }}</dd>
+        <dt>Total Price</dt>
+        <dd>{{ productDetails.price * productDetails.qty }}</dd>
+      </dl>
+    </div>
+    <div class="col-6">
+      <h2>User Details</h2>
+      <dl>
+        <dt>User Name</dt>
+        <dd>{{ userDetails.uname }}</dd>
+        <dt>User City</dt>
+        <dd>{{ userDetails.city }}</dd>
+        <dt>Email</dt>
+        <dd>{{ userDetails.email }}</dd>
+        <dt>Gender</dt>
+        <dd>{{ userDetails.gender }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
