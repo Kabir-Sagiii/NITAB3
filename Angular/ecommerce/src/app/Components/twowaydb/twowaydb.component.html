@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <dl>
+        <dt>User Name</dt>
+        <dd>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Username"
+            [(ngModel)]="uname"
+          />
+        </dd>
+        <dt>Email</dt>
+        <dd>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Email"
+            [(ngModel)]="email"
+          />
+        </dd>
+        <dt>PhoneNo</dt>
+        <dd>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Phoneno"
+            [(ngModel)]="phone"
+          />
+        </dd>
+      </dl>
+    </div>
+    <div class="col-4">
+      <dl>
+        <dt>USER NAME</dt>
+        <dd>{{ uname }}</dd>
+        <dt>EMAIL</dt>
+        <dd>{{ email }}</dd>
+        <dt>PHONE</dt>
+        <dd>{{ phone }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

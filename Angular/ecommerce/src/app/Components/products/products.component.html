@@ -1,0 +1,92 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-success">Product Details</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+        commodi quasi id facilis dolorum totam reprehenderit suscipit placeat,
+        cum delectus eveniet dicta beatae nemo, numquam quae provident quos
+        molestias accusantium deleniti! Cupiditate, fugiat exercitationem.
+        Commodi vero enim ullam mollitia ratione alias quis voluptatibus, dolor,
+        illum facilis animi maiores sequi incidunt.
+      </p>
+      <button class="btn btn-outline-success" (click)="getProductsFromServer()">
+        Get Products
+      </button>
+    </div>
+  </div>
+
+  <div class="row mt-5" *ngIf="showTable">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>IMAGE</th>
+            <th>PRODUCT NAME</th>
+            <th>CATEGORY</th>
+            <th>PRICE</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <img [src]="productD[0].image" width="100" height="100" />
+            </td>
+            <td>
+              {{ productD[0].title }}
+            </td>
+            <td>
+              {{ productD[0].category }}
+            </td>
+            <td>
+              {{ productD[0].price }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img [src]="productD[1].image" width="100" height="100" />
+            </td>
+            <td>
+              {{ productD[1].title }}
+            </td>
+            <td>
+              {{ productD[1].category }}
+            </td>
+            <td>
+              {{ productD[1].price }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img [src]="productD[2].image" width="100" height="100" />
+            </td>
+            <td>
+              {{ productD[2].title }}
+            </td>
+            <td>
+              {{ productD[2].category }}
+            </td>
+            <td>
+              {{ productD[2].price }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img [src]="productD[3].image" width="100" height="100" />
+            </td>
+            <td>
+              {{ productD[3].title }}
+            </td>
+            <td>
+              {{ productD[3].category }}
+            </td>
+            <td>
+              {{ productD[3].price }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

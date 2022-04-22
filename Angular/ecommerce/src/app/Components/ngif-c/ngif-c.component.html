@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row bg-secondary p-3 text-white" *ngIf="angular">
+    <div class="col">
+      <h2>Angular</h2>
+      <p class="lead">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
+        suscipit, aliquid dolorem, ullam excepturi fugit ad possimus expedita,
+        laudantium amet corporis tempore labore quidem itaque. Amet, qui minus
+        harum vero fugit aliquam, nulla excepturi tempore rem neque in facilis
+        tenetur dolorum corporis error atque ut ipsam perferendis cupiditate
+        architecto nisi.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3 bg-success p-3 text-white" *ngIf="react">
+    <div class="col">
+      <h2>React</h2>
+      <p class="lead">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
+        suscipit, aliquid dolorem, ullam excepturi fugit ad possimus expedita,
+        laudantium amet corporis tempore labore quidem itaque. Amet, qui minus
+        harum vero fugit aliquam, nulla excepturi tempore rem neque in facilis
+        tenetur dolorum corporis error atque ut ipsam perferendis cupiditate
+        architecto nisi.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-6">
+      <!-- <button class="btn btn-outline-secondary">Angular</button>
+      <button class="btn btn-outline-success mx-3">React</button> -->
+      <div class="row">
+        <div class="col-6">
+          <input
+            type="radio"
+            class=""
+            name="gender"
+            checked
+            (change)="showAngular()"
+          />Angular
+        </div>
+        <div class="col-6">
+          <input
+            type="radio"
+            class=""
+            name="gender"
+            (change)="showReact()"
+          />React
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

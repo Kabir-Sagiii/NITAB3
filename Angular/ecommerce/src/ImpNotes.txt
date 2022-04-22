@@ -1,0 +1,12 @@
+To enable Powershell in the VSCcode:
+
+settings.json file
+"terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "Bypass"]
+
+
+"terminal.integrated.profiles.windows": {
+    "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (migrated)": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": ["-ExecutionPolicy", "Bypass"]
+    }
+  },

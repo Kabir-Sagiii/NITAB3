@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,10 @@ import { SearchComponent } from './Components/Github/search/search.component';
 import { ProfileComponent } from './Components/Github/profile/profile.component';
 import { DetailsComponent } from './Components/Github/details/details.component';
 import { OnwaydbComponent } from './Components/Github/onwaydb/onwaydb.component';
+import { PropertyDBComponent } from './Components/property-db/property-db.component';
+import { ProductsComponent } from './Components/products/products.component';
+import { TwowaydbComponent } from './Components/twowaydb/twowaydb.component';
+import { NgifCComponent } from './Components/ngif-c/ngif-c.component';
 
 
 @NgModule({
@@ -30,11 +35,16 @@ import { OnwaydbComponent } from './Components/Github/onwaydb/onwaydb.component'
     ProfileComponent,
     DetailsComponent,
     OnwaydbComponent,
+    PropertyDBComponent,
+    ProductsComponent,
+    TwowaydbComponent,
+    NgifCComponent,
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
