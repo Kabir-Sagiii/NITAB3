@@ -19,6 +19,11 @@ import { PropertyDBComponent } from './Components/property-db/property-db.compon
 import { ProductsComponent } from './Components/products/products.component';
 import { TwowaydbComponent } from './Components/twowaydb/twowaydb.component';
 import { NgifCComponent } from './Components/ngif-c/ngif-c.component';
+import { UsersProfileComponent } from './Components/users-profile/users-profile.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { NgifthenelseComponent } from './Components/ngifthenelse/ngifthenelse.component';
+import { NgswitchdemoComponent } from './Components/ngswitchdemo/ngswitchdemo.component';
+import { NgswitchCComponent } from './Components/ngswitch-c/ngswitch-c.component';
 
 
 @NgModule({
@@ -39,6 +44,11 @@ import { NgifCComponent } from './Components/ngif-c/ngif-c.component';
     ProductsComponent,
     TwowaydbComponent,
     NgifCComponent,
+    UsersProfileComponent,
+    NavbarComponent,
+    NgifthenelseComponent,
+    NgswitchdemoComponent,
+    NgswitchCComponent,
    
   ],
   imports: [

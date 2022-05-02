@@ -29,61 +29,13 @@
         </thead>
 
         <tbody>
-          <tr>
+          <tr *ngFor="let p of productD">
             <td>
-              <img [src]="productD[0].image" width="100" height="100" />
+              <img [src]="p.image" width="100" height="100" />
             </td>
-            <td>
-              {{ productD[0].title }}
-            </td>
-            <td>
-              {{ productD[0].category }}
-            </td>
-            <td>
-              {{ productD[0].price }}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img [src]="productD[1].image" width="100" height="100" />
-            </td>
-            <td>
-              {{ productD[1].title }}
-            </td>
-            <td>
-              {{ productD[1].category }}
-            </td>
-            <td>
-              {{ productD[1].price }}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img [src]="productD[2].image" width="100" height="100" />
-            </td>
-            <td>
-              {{ productD[2].title }}
-            </td>
-            <td>
-              {{ productD[2].category }}
-            </td>
-            <td>
-              {{ productD[2].price }}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img [src]="productD[3].image" width="100" height="100" />
-            </td>
-            <td>
-              {{ productD[3].title }}
-            </td>
-            <td>
-              {{ productD[3].category }}
-            </td>
-            <td>
-              {{ productD[3].price }}
-            </td>
+            <td>{{ p.title }}</td>
+            <td>{{ p.category }}</td>
+            <td>{{ p.price }}</td>
           </tr>
         </tbody>
       </table>

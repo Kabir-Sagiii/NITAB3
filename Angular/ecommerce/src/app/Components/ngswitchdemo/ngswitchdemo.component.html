@@ -1,0 +1,92 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-2">
+      <input
+        type="radio"
+        value="t1"
+        name="templateValues"
+        checked
+        (change)="changeTemplate($event)"
+      />Angular
+    </div>
+    <div class="col-2">
+      <input
+        type="radio"
+        value="t2"
+        name="templateValues"
+        (change)="changeTemplate($event)"
+      />React
+    </div>
+    <div class="col-2">
+      <input
+        type="radio"
+        value="t3"
+        name="templateValues"
+        (change)="changeTemplate($event)"
+      />Node Js
+    </div>
+    <div class="col-2">
+      <input
+        type="radio"
+        value="t4"
+        name="templateValues"
+        (change)="changeTemplate($event)"
+      />MongoDB
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+          <h2>ngSwitch Directive</h2>
+        </div>
+
+        <div class="card-body">
+          <div [ngSwitch]="templateValue">
+            <div
+              class="display-4 text-center p-5 text-danger"
+              *ngSwitchCase="'t1'"
+            >
+              <img
+                src="https://coryrylan.com/assets/images/posts/types/angular-800x800.png"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              class="display-4 text-center p-5 text-primary"
+              *ngSwitchCase="'t2'"
+            >
+              <img
+                src="https://th.bing.com/th/id/OIP.lvR5nni7xdPCxU-tC6tzzgHaHa?pid=ImgDet&rs=1"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              class="display-4 text-center p-5 text-success"
+              *ngSwitchCase="'t3'"
+            >
+              <img
+                src="https://th.bing.com/th/id/OIP.7GgA3ppsiPQmZMitmTb8rAHaHa?pid=ImgDet&rs=1"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              class="display-4 text-center p-5 text-info"
+              *ngSwitchCase="'t4'"
+            >
+              <img
+                src="https://www.cloudsavvyit.com/p/uploads/2021/07/f5932bc2.jpg?width=1198&trim=1,1&bg-color=000&pad=1,1"
+                height="300"
+                width="300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
