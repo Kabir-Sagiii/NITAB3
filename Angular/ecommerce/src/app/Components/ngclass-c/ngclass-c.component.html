@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div [ngClass]="{ mybox: mybox, mybox2: mybox2 }">
+        <h2>ngClass</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          iure error ipsum dicta quos tempore rerum, molestiae culpa sequi a
+          nobis aliquam atque dolores ipsam vitae tenetur consequatur labore
+          earum aut aliquid eligendi quidem laudantium repellat. Repellendus,
+          atque suscipit. Exercitationem sequi ipsa non repudiandae quis
+          explicabo cum, minima molestiae harum deleniti voluptate quod. Soluta,
+          quia. Vero enim reiciendis sint delectus.
+        </p>
+        <button class="btn btn-success" (click)="ApplyBox1Styles()">
+          myBox
+        </button>
+        <button class="btn btn-secondary mx-3" (click)="ApplyBox2Styles()">
+          myBox2
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <div
+        class="card"
+        [ngClass]="{ 'bg-dark': switch.value, 'text-white': switch.value }"
+      >
+        <div class="card-header">
+          <h2>ngClass Concept</h2>
+          <div class="form-check form-switch">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              ngModel
+              #switch="ngModel"
+            />Switch On For Dark Mode
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Raj Sinha</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            fuga vero veritatis accusantium repudiandae! Libero provident
+            suscipit tempora soluta fuga.
+          </p>
+          <button
+            class="btn"
+            [ngClass]="{ 'btn-dark': !switch.value, 'btn-light': switch.value }"
+          >
+            Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

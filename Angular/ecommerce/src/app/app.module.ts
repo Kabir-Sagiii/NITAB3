@@ -24,6 +24,10 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { NgifthenelseComponent } from './Components/ngifthenelse/ngifthenelse.component';
 import { NgswitchdemoComponent } from './Components/ngswitchdemo/ngswitchdemo.component';
 import { NgswitchCComponent } from './Components/ngswitch-c/ngswitch-c.component';
+import { NgclassCComponent } from './Components/ngclass-c/ngclass-c.component';
+import { NgstyleCComponent } from './Components/ngstyle-c/ngstyle-c.component';
+import { ParentccComponent } from './Components/Parent-Child/Parent-to-Child/parentcc/parentcc.component';
+import { ChildccComponent } from './Components/Parent-Child/Parent-to-Child/childcc/childcc.component';
 
 
 @NgModule({
@@ -49,6 +53,10 @@ import { NgswitchCComponent } from './Components/ngswitch-c/ngswitch-c.component
     NgifthenelseComponent,
     NgswitchdemoComponent,
     NgswitchCComponent,
+    NgclassCComponent,
+    NgstyleCComponent,
+    ParentccComponent,
+    ChildccComponent,
    
   ],
   imports: [
