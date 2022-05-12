@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentccComponent implements OnInit {
 
-  parentData:string = ''
+  parentData:string = 'No Data From Parent Component'
   constructor() { }
 
   

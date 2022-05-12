@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+   userData:any
   constructor() { }
+  getDataFromSearchComponent(e:any) {
+     this.userData = e
+     console.log("Home Component",this.userData)
+  }
 
   ngOnInit(): void {
   }

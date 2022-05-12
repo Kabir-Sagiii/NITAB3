@@ -26,9 +26,18 @@ export class PropertyDBComponent implements OnInit {
   getPasswordText(inputRef:any):void {
       // alert("working")
         // this.inputType = "text"
-        this.btnValue = "Hide Password"
-        console.log(inputRef.value)
+        // this.btnValue = "Hide Password"
+        // console.log(inputRef.type)
+        // inputRef.type="text"
+          if(inputRef.type === 'password') {
+             this.btnValue = "Hide Password"
+       
         inputRef.type="text"
+          } else {
+             this.btnValue = "Show Password"
+       
+        inputRef.type="password"
+          }
 
   }
 

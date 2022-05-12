@@ -1,17 +1,19 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col">
-      <app-search></app-search>
+      <app-search
+        (customEvent)="getDataFromSearchComponent($event)"
+      ></app-search>
     </div>
   </div>
 
   <div class="row">
     <div class="col-4">
-      <app-profile></app-profile>
+      <app-profile [userDataCameFromHomeComp]="userData"></app-profile>
     </div>
 
     <div class="col-8">
-      <app-details></app-details>
+      <app-details [userDataCameFromHomeComp]="userData"></app-details>
     </div>
   </div>
 </div>

@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header bg-dark text-white text-center">
+          <h3>Parent Component</h3>
+        </div>
+        <div class="card-body">
+          <app-childc (customEvent)="getDataFromChild($event)"></app-childc>
+        </div>
+        <div class="card-footer">
+          <p class="display-4 text-success text-center">{{ childData }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
