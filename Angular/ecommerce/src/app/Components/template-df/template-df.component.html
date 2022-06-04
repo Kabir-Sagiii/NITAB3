@@ -1,0 +1,88 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-success text-center text-white">
+          <h3>Template Driven Form</h3>
+        </div>
+
+        <div class="card-body">
+          <form #myForm="ngForm">
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input
+                  [ngClass]="{
+                    valid: (uname.touched || myForm.submitted) && !uname.errors,
+                    invalid: (uname.touched || myForm.submitted) && uname.errors
+                  }"
+                  required
+                  minlength="4"
+                  type="text"
+                  class="form-control"
+                  name="uname"
+                  ngModel
+                  #uname="ngModel"
+                />
+              </dd>
+              <dd *ngIf="(uname.touched || myForm.submitted) && uname.errors">
+                <span class="text-danger" *ngIf="uname.errors['required']"
+                  >Username is Required</span
+                >
+                <span class="text-danger" *ngIf="uname.errors['minlength']"
+                  >Enter Minimum 4 characters</span
+                >
+              </dd>
+              <dt>Phone No</dt>
+              <dd>
+                <input
+                  required
+                  [ngClass]="{
+                    valid: myForm.submitted && !phone.errors,
+                    invalid: myForm.submitted && phone.errors
+                  }"
+                  pattern="\+91[0-9]{10}"
+                  type="text"
+                  class="form-control"
+                  name="phone"
+                  ngModel
+                  #phone="ngModel"
+                />
+              </dd>
+              <dd *ngIf="myForm.submitted && phone.errors">
+                <span class="text-danger" *ngIf="phone.errors['required']"
+                  >PhoneNo is Required</span
+                >
+                <span class="text-danger" *ngIf="phone.errors['pattern']"
+                  >Enter data in Required Format</span
+                >
+              </dd>
+            </dl>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button
+              [disabled]="myForm.pristine"
+              class="btn mt-3 btn-primary w-100"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <dl>
+        <dt>Pristine</dt>
+        <dd>{{ myForm.pristine }}</dd>
+        <dt>Dirty</dt>
+        <dd>{{ myForm.dirty }}</dd>
+        <dt>Valid</dt>
+        <dd>{{ myForm.valid }}</dd>
+        <dt>Invalid</dt>
+        <dd>{{ myForm.invalid }}</dd>
+        <dt>Submitted</dt>
+        <dd>{{ myForm.submitted }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

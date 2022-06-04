@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <div class="row mt-5">
+    <div class="col">
+      <div class="card p-3 cardbox">
+        <div class="row">
+          <div class="col-4">
+            <img [src]="productData.image" height="300" width="300" />
+          </div>
+
+          <div class="col-8">
+            <dl>
+              <dt>Product Name</dt>
+              <dd>{{ productData.title }}</dd>
+              <dt>Product Price</dt>
+              <dd>{{ productData.price }}</dd>
+              <dt>Category</dt>
+              <dd>{{ productData.category }}</dd>
+              <dt>Description</dt>
+              <dd>
+                {{ productData.description }}
+              </dd>
+              <dt>Product Rating</dt>
+              <dd>{{ productData.rating.rate }}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

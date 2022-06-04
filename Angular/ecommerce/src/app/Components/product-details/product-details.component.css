@@ -1,0 +1,5 @@
+.cardbox {
+    box-shadow: 0 0 20px black;
+    background-color: rgba(67, 61, 70, 0.5);
+    color: white
+}

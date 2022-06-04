@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms'
+import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +44,11 @@ import { ElectronicsComponent } from './Components/Internal-Routing/electronics/
 import { JewellaryComponent } from './Components/Internal-Routing/jewellary/jewellary.component';
 import { MensCComponent } from './Components/Internal-Routing/mens-c/mens-c.component';
 import { WomensCComponent } from './Components/Internal-Routing/womens-c/womens-c.component';
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
+import { TemplateDFComponent } from './Components/template-df/template-df.component';
+import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMComponent } from './Components/angular-m/angular-m.component';
 
 
 @NgModule({
@@ -78,13 +88,24 @@ import { WomensCComponent } from './Components/Internal-Routing/womens-c/womens-
     JewellaryComponent,
     MensCComponent,
     WomensCComponent,
+    ProductDetailsComponent,
+    TemplateDFComponent,
+    ReactiveFormsComponent,
+    AngularMComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

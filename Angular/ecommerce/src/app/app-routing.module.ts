@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AngularMComponent } from './Components/angular-m/angular-m.component';
 import { CardsComponent } from './Components/cards/cards.component';
 import { CategoryComponent } from './Components/category/category.component';
 import { HomeComponent } from './Components/Github/home/home.component';
@@ -14,7 +15,10 @@ import { NgswitchCComponent } from './Components/ngswitch-c/ngswitch-c.component
 import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
 import { ParentcComponent } from './Components/Parent-Child/Child-to-Parent/parentc/parentc.component';
 import { ParentccComponent } from './Components/Parent-Child/Parent-to-Child/parentcc/parentcc.component';
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { ProductsComponent } from './Components/products/products.component';
+import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
+import { TemplateDFComponent } from './Components/template-df/template-df.component';
 import { UserdetailsCCComponent } from './Components/userdetails-cc/userdetails-cc.component';
 import { UsersProfileComponent } from './Components/users-profile/users-profile.component';
 
@@ -64,6 +68,18 @@ const routes: Routes = [
         path:"womensc",component:WomensCComponent
       }
     ]
+  },
+  {
+    path:"productdetails/:id",component:ProductDetailsComponent
+  },
+  {
+   path:"tdf",component:TemplateDFComponent
+  },
+  {
+  path:"mdf",component:ReactiveFormsComponent
+  },
+  {
+  path:"am",component:AngularMComponent
   },
   {
     path:"**",component:PagenotfoundComponent

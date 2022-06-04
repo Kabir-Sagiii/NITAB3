@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CategoriesService} from '../../../Services/categories.service'
 
 @Component({
   selector: 'app-jewellary',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jewellary.component.css']
 })
 export class JewellaryComponent implements OnInit {
-
-  constructor() { }
+  jewellaryData:any
+  constructor(private category:CategoriesService) { }
 
   ngOnInit(): void {
+    this.getJewellaryDetails()
   }
+
+        getJewellaryDetails(){
+          this.category.getDetailsOfCategory('jewelery').subscribe((res)=>{
+               console.log(res)
+               this.jewellaryData = res
+          })
+        }
 
 }

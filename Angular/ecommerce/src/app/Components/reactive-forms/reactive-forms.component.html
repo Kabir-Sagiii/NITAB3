@@ -1,0 +1,94 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white text-center">
+          <h3>Reactive Forms</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="myform" (submit)="getLoginData()">
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="name"
+                />
+              </dd>
+              <dd *ngIf="submitted && myform.controls['name'].errors">
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['name'].errors['required']"
+                  >Username Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['name'].errors['minlength']"
+                  >Minimum 5 Char are Required</span
+                >
+              </dd>
+              <dt>Password</dt>
+              <dd>
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                />
+              </dd>
+              <dd *ngIf="submitted && myform.controls['password'].errors">
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['password'].errors['required']"
+                  >Password Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['password'].errors['minlength']"
+                  >Minimum 6 char are Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['password'].errors['maxlength']"
+                  >Dont Exceed More then 12 Char</span
+                >
+              </dd>
+            </dl>
+            <button type="submit" class="btn btn-dark px-3">Login</button>
+            <button
+              type="button"
+              class="btn btn-dark mx-3 px-3"
+              (click)="resetValues()"
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              class="btn btn-dark mx-3 px-3"
+              (click)="setValues()"
+            >
+              SetValue
+            </button>
+            <button
+              type="button"
+              class="btn btn-dark mx-3 px-3"
+              (click)="updateValues()"
+            >
+              UpdatePartially
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <dl>
+        <dt>Username</dt>
+        <!-- <dd>{{ myform.value.name }}</dd> -->
+        <dd>{{ myform.controls["name"].value }}</dd>
+        <dt>Password</dt>
+        <!-- <dd>{{ myform.value.password }}</dd> -->
+        <dd>{{ myform.controls["password"].value }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
