@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header bg-dark text-white text-center">
+          <h2>Register Here</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="myform" #myform1="ngForm">
+            <dl>
+              <dt>Enter Name</dt>
+              <dd>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="name"
+                />
+              </dd>
+              <dd *ngIf="myform1.submitted && myform.controls['name'].errors">
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['name'].errors['required']"
+                  >Name is Required</span
+                >
+                <span
+                  class="text-danger"
+                  *ngIf="myform.controls['name'].errors['minlength']"
+                  >Enter Minimum 4 Characters</span
+                >
+              </dd>
+              <dt>Enter Password</dt>
+              <dd>
+                <input
+                  type="password"
+                  class="form-control"
+                  formControlName="password"
+                />
+              </dd>
+            </dl>
+            <button class="btn btn-primary mx-1">Register</button>
+            <button class="btn btn-primary mx-1" (click)="reset()">
+              Reset
+            </button>
+            <button class="btn btn-primary mx-1" (click)="updateName()">
+              Update Name
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

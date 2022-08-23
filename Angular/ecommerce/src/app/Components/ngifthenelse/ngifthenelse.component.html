@@ -19,8 +19,9 @@
             #switch="ngModel"
           />Show Preview
         </dt>
-        <dd *ngIf="switch.value; then image; else msg"></dd>
-        {{ switch.value }}
+        <dd *ngIf="switch.value; then image; else msg">
+          {{ switch.value }}
+        </dd>
 
         <ng-template #image>
           <img [src]="product.image" width="200" height="200" />

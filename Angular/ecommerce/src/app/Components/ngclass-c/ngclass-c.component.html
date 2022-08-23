@@ -59,3 +59,24 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          <h2>Ng Class</h2>
+          <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" #input />Dark Mode
+          </div>
+        </div>
+        <div
+          class="card-body"
+          [ngClass]="{ 'bg-dark': input.value, 'text-white': input.value }"
+        >
+          <h2>Raj</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

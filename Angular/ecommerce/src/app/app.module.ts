@@ -49,6 +49,7 @@ import { TemplateDFComponent } from './Components/template-df/template-df.compon
 import { ReactiveFormsComponent } from './Components/reactive-forms/reactive-forms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMComponent } from './Components/angular-m/angular-m.component';
+import { ADummyComponent } from './Components/adummy/adummy.component';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { AngularMComponent } from './Components/angular-m/angular-m.component';
     TemplateDFComponent,
     ReactiveFormsComponent,
     AngularMComponent,
+    ADummyComponent,
    
   ],
   imports: [
